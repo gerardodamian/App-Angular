@@ -5,6 +5,11 @@
     </ion-buttons>
     <ion-title>Indumentaria</ion-title>
   </ion-toolbar>
+   <ion-item>
+    <ion-label> </ion-label>
+    <img src="https://cdn-icons-png.flaticon.com/512/3394/3394009.png" alt="carrito" class="img-carrito"  >
+    <ion-badge color="danger">4</ion-badge>
+  </ion-item>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -26,6 +31,7 @@
           <ion-card-subtitle>{{product.category}}</ion-card-subtitle>
           <p>{{ product.description }}</p>
           <h2 class="precio">${{ product.price }}</h2>
+          <ion-button>Agregar al Carrito <img src="https://cdn-icons-png.flaticon.com/512/3394/3394009.png" alt="carrito" class="img-carrito"  ></ion-button>
         </ion-card-header>
         <ion-card-content>
           Somos una empresa dedicada a proveer soluciones técnicas de implementación profesional. Productos diseñados de acuerdo a certificaciones internacionales de seguridad.
@@ -43,7 +49,7 @@
 </ion-modal>
 <ion-footer>
   <ion-toolbar>
-    <ion-title> Volver al Inicio </ion-title>
+    <ion-button [routerLink]="['/main']"> Volver al Inicio </ion-button>
     
   </ion-toolbar>
 </ion-footer>

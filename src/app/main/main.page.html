@@ -5,6 +5,11 @@
     </ion-buttons>
     <ion-title color="warning">Venta de Ropa</ion-title>
   </ion-toolbar>
+   <ion-item>
+    <ion-label> </ion-label>
+    <img src="https://cdn-icons-png.flaticon.com/512/3394/3394009.png" alt="carrito" class="img-carrito"  >
+    <ion-badge color="danger">4</ion-badge>
+  </ion-item>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -49,11 +54,11 @@
     <ion-tab-button tab="library">
       
       Sucursales
-    </ion-tab-button>
-    <ion-tab-button tab="search">
+    </ion-tab-button >
+    <ion-tab-button tab="search" [routerLink]="['/product-list']">
       
       Buscar
-    </ion-tab-button>
+    </ion-tab-button >
   </ion-tab-bar>
 </ion-tabs>
   </ion-toolbar>

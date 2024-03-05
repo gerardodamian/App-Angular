@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Product, ProductsService } from '../service/products.service';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Product, ProductsService } from '../service/products.service';
   templateUrl: './product-list.page.html',
   styleUrls: ['./product-list.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+  imports: [IonicModule, CommonModule, FormsModule, RouterLink],
 })
 export class ProductListPage implements OnInit {
   products: Product[] = [];

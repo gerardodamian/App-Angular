@@ -16,5 +16,10 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./product-list/product-list.page').then((m) => m.ProductListPage),
   },
+  {
+    path: 'search',
+    loadComponent: () =>
+      import('./product-list/product-list.page').then((m) => m.ProductListPage),
+  },
 ];
 export default routes;
