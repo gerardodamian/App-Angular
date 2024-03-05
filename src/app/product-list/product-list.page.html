@@ -1,7 +1,6 @@
 <ion-header [translucent]="true">
-  
   <ion-toolbar>
-    <ion-buttons slot="start" >
+    <ion-buttons slot="start">
       <ion-menu-button menu="m1"></ion-menu-button>
     </ion-buttons>
     <ion-title>Indumentaria</ion-title>
@@ -15,30 +14,23 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list color="primary">
-    <ion-list-header>
+  <ion-list color="primary" role="menu" aria-label="Lista de productos en oferta">
+    <ion-list-header role="menuitem">
       <ion-label>Productos en Ofertas</ion-label>
     </ion-list-header>
     @for (product of products; track product._id){
-    
-
-    <ion-card>
-  <img [alt]="product.name" [src]="product.image" />
-  <ion-card-header>
-    <ion-card-title>{{product.name}}</ion-card-title>
-    <ion-card-subtitle>{{product.category}}</ion-card-subtitle>
-    <p>{{ product.description }}</p>
-    <h2 class="precio">${{ product.price }}</h2>
-  </ion-card-header>
-
-  <ion-card-content>
-    Somos una empresa dedicada a proveer soluciones técnicas de implementación profesional. Productos diseñados de acuerdo a certificaciones internacionales de seguridad.
-  </ion-card-content>
-</ion-card>
-  }
+      <ion-card role="menuitem">
+        <img [alt]="product.name" [src]="product.image" />
+        <ion-card-header>
+          <ion-card-title>{{product.name}}</ion-card-title>
+          <ion-card-subtitle>{{product.category}}</ion-card-subtitle>
+          <p>{{ product.description }}</p>
+          <h2 class="precio">${{ product.price }}</h2>
+        </ion-card-header>
+        <ion-card-content>
+          Somos una empresa dedicada a proveer soluciones técnicas de implementación profesional. Productos diseñados de acuerdo a certificaciones internacionales de seguridad.
+        </ion-card-content>
+      </ion-card>
+    }
   </ion-list>
 </ion-content>
-
-
-
-
