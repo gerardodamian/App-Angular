@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Product, ProductsService } from '../service/products.service';
 
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.page.html',
